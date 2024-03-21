@@ -3,9 +3,13 @@
 @tailwind utilities;
 
 * {
-    @apply m-0 p-0 box-border focus:outline-none focus-within:shadow-sm focus-within:shadow-green-500
+    @apply m-0 p-0 box-border
 }
 
 body {
     @apply bg-gray-800 text-gray-100 antialiased font-app
+}
+
+button, a {
+   @apply  outline-none focus-visible:shadow-sm focus-visible:shadow-green-500
 }

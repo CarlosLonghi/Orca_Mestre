@@ -7,6 +7,7 @@ export default {
   theme: {
     colors: {
       gray: {
+        50: '#F9FAFB',
         100: '#E1E1E6',
         300: '#C4C4CC',
         400: '#8D8D99',
@@ -32,6 +33,9 @@ export default {
     extend: {
       fontFamily: {
         app: 'Roboto, sans-serif',
+      },
+      maxWidth: {
+        app: '70rem',
       },
     },
   },
