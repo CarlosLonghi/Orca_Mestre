@@ -1,5 +1,6 @@
-import { Header } from "../components/header";
-import { Summary } from "../components/summary";
+import { Header } from "../../components/header";
+import { Summary } from "../../components/summary";
+import { SearchForm } from "./SearchForm";
 
 export function Transactions() {
     return (
@@ -8,6 +9,8 @@ export function Transactions() {
             <Summary />
 
             <main className="w-full max-w-app mt-16 mx-auto px-6">
+                <SearchForm />
+
                 <table className="w-full border-separate border-spacing-y-2">
                     <tbody>
                         <tr>
