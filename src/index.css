@@ -14,6 +14,10 @@ button, a {
    @apply  outline-none focus-visible:shadow-sm focus-visible:shadow-green-500
 }
 
+input {
+    @apply outline-none focus-visible:outline-1 focus-visible:outline-green-500
+}
+
 table td {
     @apply py-5 px-8 bg-gray-700 first:rounded-tl-md first:rounded-bl-md last:rounded-tr-md last:rounded-br-md
 }
