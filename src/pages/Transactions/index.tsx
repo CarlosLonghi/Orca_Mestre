@@ -1,18 +1,10 @@
-import { useEffect, useState } from "react";
+import { useContext } from "react";
 import { tv } from 'tailwind-variants'
 
+import { TransactionsContext } from "../../contexts/TransactionsContext";
 import { Header } from "../../components/header";
 import { Summary } from "../../components/summary";
 import { SearchForm } from "./SearchForm";
-
-interface Transaction {
-    id: number,
-    description: string,
-    type: 'income' | 'outcome',
-    category: string,
-    price: number,
-    createdAt: string
-}
 
 const transactionValueStyle = tv({
     base: '',
@@ -25,17 +17,7 @@ const transactionValueStyle = tv({
 });
 
 export function Transactions() {
-    const [transactions, setTransactions] = useState<Transaction[]>([])
-
-    async function loadTransactions() {
-        const response = await fetch('http://localhost:3000/transactions')
-        const data = await response.json()
-
-        setTransactions(data)
-    }
-    useEffect(() => {
-        loadTransactions()
-    }, [])
+    const { transactions } = useContext(TransactionsContext)
 
     return (
         <div>

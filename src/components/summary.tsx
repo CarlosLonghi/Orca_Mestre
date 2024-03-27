@@ -1,6 +1,11 @@
+import { useContext } from 'react'
+import { TransactionsContext } from '../contexts/TransactionsContext'
 import { ArrowCircleDown, ArrowCircleUp, CurrencyDollar } from '@phosphor-icons/react'
 
 export function Summary() {
+    const { transactions } = useContext(TransactionsContext)
+    console.log(transactions);
+
     return (
         <article className="w-full max-w-app m-auto -mt-20 px-6 grid grid-cols-3 gap-8">
             <div className='bg-gray-600 rounded-md py-6 px-8'>
