@@ -13,8 +13,16 @@
             "description": "Pagamento da fatura",
             "type": "outcome",
             "categoty": "Cartão",
-            "price": 600,
+            "price": 800,
             "createdAt": "2024-03-30T15:00:11.618Z"
+        },
+        {
+            "id": "3",
+            "description": "Venda de imóvel",
+            "type": "income",
+            "categoty": "Venda",
+            "price": 20000,
+            "createdAt": "2024-01-30T15:00:11.618Z"
         }
     ]
 }
