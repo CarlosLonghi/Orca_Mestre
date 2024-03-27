@@ -1,5 +1,6 @@
 import { ArrowCircleDown, ArrowCircleUp, X } from "@phosphor-icons/react";
 import * as Dialog from "@radix-ui/react-dialog";
+import * as RadioGroup from '@radix-ui/react-radio-group';
 
 export function NewTransactionModal() {
     return (
@@ -17,16 +18,16 @@ export function NewTransactionModal() {
                     <input className="bg-gray-900 placeholder-gray-500 rounded-md border-none text-gray-300 p-4" type="number" placeholder="Preço" required/>
                     <input className="bg-gray-900 placeholder-gray-500 rounded-md border-none text-gray-300 p-4" type="text" placeholder="Categoria" required/>
 
-                    <div className="grid grid-cols-2 gap-4 mt-2">
-                        <button className="bg-gray-700 text-gray-300 py-4 flex items-center justify-center gap-2 rounded-md">
-                            <ArrowCircleDown className="w-6 h-6 text-green-500"/>
+                    <RadioGroup.Root className="grid grid-cols-2 gap-4 mt-2">
+                        <RadioGroup.Item value="income" className="group bg-gray-700 text-gray-300 py-4 flex items-center justify-center gap-2 rounded-md transition ease-in-out data-[state=checked]:bg-green-700 data-[state=checked]:text-gray-50 data-[state=unchecked]:hover:bg-gray-600">
+                            <ArrowCircleDown className="w-6 h-6 text-green-500 group-data-[state=checked]:text-gray-50"/>
                             Entrada
-                        </button>
-                        <button className="bg-gray-700 text-gray-300 py-4 flex items-center justify-center gap-2 rounded-md">
-                            <ArrowCircleUp className="w-6 h-6 text-red-500"/>
+                        </RadioGroup.Item>
+                        <RadioGroup.Item value="outcome" className="group bg-gray-700 text-gray-300 py-4 flex items-center justify-center gap-2 rounded-md transition ease-in-out data-[state=checked]:bg-red-700 data-[state=checked]:text-gray-50 data-[state=unchecked]:hover:bg-gray-600">
+                            <ArrowCircleUp className="w-6 h-6 text-red-500 group-data-[state=checked]:text-gray-50"/>
                             Saida
-                        </button>
-                    </div>
+                        </RadioGroup.Item>
+                    </RadioGroup.Root>
 
                     <button className="w-full py-5 mt-2 text-gray-50 bg-green-500 font-bold rounded-md transition ease-in-out hover:bg-green-700" type="submit">Cadastrar</button>
                 </form>

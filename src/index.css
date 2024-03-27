@@ -14,6 +14,13 @@ button, a {
    @apply  outline-none focus-visible:shadow-sm focus-visible:shadow-green-500
 }
 
+@layer base {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    @apply appearance-none
+  }
+}
+
 input {
     @apply outline-none focus-visible:outline-1 focus-visible:outline-green-500
 }
