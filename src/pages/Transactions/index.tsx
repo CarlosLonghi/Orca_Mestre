@@ -5,6 +5,7 @@ import { TransactionsContext } from "../../contexts/TransactionsContext";
 import { Header } from "../../components/header";
 import { Summary } from "../../components/summary";
 import { SearchForm } from "./SearchForm";
+import { dateFormatter, priceFormatter } from "../../utils/formatter";
 
 const transactionValueStyle = tv({
     base: '',
@@ -33,9 +34,14 @@ export function Transactions() {
                             return (
                                 <tr key={transaction.id}>
                                     <td className="flex-1">{transaction.description}</td>
-                                    <td className={transactionValueStyle({ type: transaction.type })}>R$ {transaction.price}</td>
+                                    <td 
+                                        className={transactionValueStyle({ type: transaction.type })}
+                                    >
+                                        {transaction.type === "outcome" && '- '}
+                                        {priceFormatter.format(transaction.price)}
+                                    </td>
                                     <td>{transaction.category}</td>
-                                    <td>{transaction.createdAt}</td>
+                                    <td>{dateFormatter.format(new Date(transaction.createdAt))}</td>
                                 </tr>
                             )
                         })}

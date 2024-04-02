@@ -4,7 +4,7 @@
             "id": "1",
             "description": "Recebimento de salário",
             "type": "income",
-            "categoty": "Pagamento",
+            "category": "Pagamento",
             "price": 1200,
             "createdAt": "2024-03-27T15:00:11.618Z"
         },
@@ -12,7 +12,7 @@
             "id": "2",
             "description": "Pagamento da fatura",
             "type": "outcome",
-            "categoty": "Cartão",
+            "category": "Cartão",
             "price": 800,
             "createdAt": "2024-03-30T15:00:11.618Z"
         },
@@ -20,7 +20,7 @@
             "id": "3",
             "description": "Venda de imóvel",
             "type": "income",
-            "categoty": "Venda",
+            "category": "Venda",
             "price": 20000,
             "createdAt": "2024-01-30T15:00:11.618Z"
         },
@@ -28,7 +28,7 @@
             "id": "3",
             "description": "Compra de moto",
             "type": "outcome",
-            "categoty": "Compra",
+            "category": "Compra",
             "price": 10000,
             "createdAt": "2024-03-30T15:00:11.618Z"
         }

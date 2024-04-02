@@ -1,6 +1,7 @@
 import { useContext } from 'react'
 import { TransactionsContext } from '../contexts/TransactionsContext'
 import { ArrowCircleDown, ArrowCircleUp, CurrencyDollar } from '@phosphor-icons/react'
+import { priceFormatter } from '../utils/formatter'
 
 export function Summary() {
     const { transactions } = useContext(TransactionsContext)
@@ -24,7 +25,7 @@ export function Summary() {
                     <ArrowCircleDown className='w-8 h-8 text-green-300'/>
                 </header>
 
-                <strong className='block mt-4 text-2xl md:text-3xl'>R$ {summary.income}</strong>
+                <strong className='block mt-4 text-2xl md:text-3xl'>{priceFormatter.format(summary.income)}</strong>
             </div>
 
             <div className='bg-gray-600 rounded-md py-6 px-8'>
@@ -33,7 +34,7 @@ export function Summary() {
                     <ArrowCircleUp className='w-8 h-8 text-red-300'/>
                 </header>
 
-                <strong className='block mt-4 text-2xl md:text-3xl'>R$ {summary.outcome}</strong>
+                <strong className='block mt-4 text-2xl md:text-3xl'>{priceFormatter.format(summary.outcome)}</strong>
             </div>
 
             <div className='bg-green-700 rounded-md py-6 px-8'>
@@ -42,7 +43,7 @@ export function Summary() {
                     <CurrencyDollar className='w-8 h-8 text-gray-50'/>
                 </header>
 
-                <strong className='block mt-4 text-2xl md:text-3xl'>R$ {summary.total}</strong>
+                <strong className='block mt-4 text-2xl md:text-3xl'>{priceFormatter.format(summary.total)}</strong>
             </div>
         </article>
     )
