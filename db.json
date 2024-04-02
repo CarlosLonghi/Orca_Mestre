@@ -23,6 +23,14 @@
             "categoty": "Venda",
             "price": 20000,
             "createdAt": "2024-01-30T15:00:11.618Z"
+        },
+        {
+            "id": "3",
+            "description": "Compra de moto",
+            "type": "outcome",
+            "categoty": "Compra",
+            "price": 10000,
+            "createdAt": "2024-03-30T15:00:11.618Z"
         }
     ]
 }
