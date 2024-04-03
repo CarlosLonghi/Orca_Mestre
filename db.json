@@ -25,12 +25,60 @@
             "createdAt": "2024-01-30T15:00:11.618Z"
         },
         {
-            "id": "3",
+            "id": "4",
             "description": "Compra de moto",
             "type": "outcome",
             "category": "Compra",
             "price": 10000,
             "createdAt": "2024-03-30T15:00:11.618Z"
+        },
+        {
+            "id": "5",
+            "description": "Recebimento de bônus",
+            "type": "income",
+            "category": "Extra",
+            "price": 500,
+            "createdAt": "2024-04-01T15:00:11.618Z"
+        },
+        {
+            "id": "6",
+            "description": "Pagamento de aluguel",
+            "type": "outcome",
+            "category": "Aluguel",
+            "price": 1200,
+            "createdAt": "2024-04-02T15:00:11.618Z"
+        },
+        {
+            "id": "7",
+            "description": "Venda de carro",
+            "type": "income",
+            "category": "Venda",
+            "price": 15000,
+            "createdAt": "2024-03-20T15:00:11.618Z"
+        },
+        {
+            "id": "8",
+            "description": "Compra de eletrodomésticos",
+            "type": "outcome",
+            "category": "Compras",
+            "price": 2000,
+            "createdAt": "2024-04-01T15:00:11.618Z"
+        },
+        {
+            "id": "9",
+            "description": "Recebimento de prêmio",
+            "type": "income",
+            "category": "Extra",
+            "price": 1000,
+            "createdAt": "2024-04-03T15:00:11.618Z"
+        },
+        {
+            "id": "10",
+            "description": "Pagamento de mensalidade",
+            "type": "outcome",
+            "category": "Educação",
+            "price": 500,
+            "createdAt": "2024-03-29T15:00:11.618Z"
         }
     ]
 }
