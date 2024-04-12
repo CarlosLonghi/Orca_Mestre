@@ -87,6 +87,14 @@
       "type": "outcome",
       "createdAt": "2024-04-03T16:33:50.905Z",
       "id": "I0b5lP2"
+    },
+    {
+      "description": "Fatura do cartão",
+      "price": 500,
+      "category": "Fatura",
+      "type": "outcome",
+      "createdAt": "2024-04-12T16:27:27.617Z",
+      "id": "RKqZ5Wb"
     }
   ]
 }

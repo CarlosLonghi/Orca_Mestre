@@ -1,4 +1,3 @@
-import { useContext } from "react";
 import { tv } from 'tailwind-variants'
 
 import { TransactionsContext } from "../../contexts/TransactionsContext";
@@ -6,6 +5,7 @@ import { Header } from "../../components/header";
 import { Summary } from "../../components/summary";
 import { SearchForm } from "./SearchForm";
 import { dateFormatter, priceFormatter } from "../../utils/formatter";
+import { useContextSelector } from "@fluentui/react-context-selector";
 
 const transactionValueStyle = tv({
     base: '',
@@ -18,7 +18,9 @@ const transactionValueStyle = tv({
 });
 
 export function Transactions() {
-    const { transactions } = useContext(TransactionsContext)
+    const transactions = useContextSelector(TransactionsContext, (context) => {
+        return context.transactions
+    })
 
     return (
         <div>
